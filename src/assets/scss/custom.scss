@@ -5,3 +5,38 @@
   background-position: center;
   background-size: cover;
 }
+.button-radio-style{
+  height: 75px;
+  text-align: center;
+  line-height: 0.75rem;
+  padding-top: 0.5rem;
+  width: 25%;
+}
+.radio-style .ant-radio-button-wrapper{
+  span{
+    text-align: center;
+    text-align: -webkit-center;
+  }
+  div{
+    padding: 10px;
+    border-radius: 12px;
+    width: fit-content;
+  }
+}
+.radio-style .ant-radio-button-wrapper-checked{
+  span{
+    text-align: center;
+    text-align: -webkit-center;
+  }
+}
+.glider {
+	position: relative;
+	display: flex;
+	height: 54px;
+	width: 25%;
+  top: -66px;
+	background-color: #4096ff5c;
+	z-index: 1;
+	border-radius: 99px;
+	transition: 0.25s ease-out;
+}
