@@ -18,7 +18,7 @@
     text-align: -webkit-center;
   }
   div{
-    padding: 10px;
+    padding: 10px 0px;
     border-radius: 12px;
     width: fit-content;
   }
@@ -28,6 +28,12 @@
     text-align: center;
     text-align: -webkit-center;
   }
+}
+.radio-style .ant-radio-button-wrapper::before{
+  width: 0px !important;
+}
+.radio-style .ant-radio-button-wrapper{
+  border: 0px;
 }
 .glider {
 	position: relative;
