@@ -39,3 +39,6 @@
 html{
   overflow: hidden;
 }
+body{
+  overflow: auto;
+}

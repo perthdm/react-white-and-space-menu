@@ -232,7 +232,7 @@ const UIMenu = () => {
   return (
     <>
       <HeaderComponent />
-      <div style={{ width: "100%" }} className="container"  style={{ marginTop: "74px" }}>
+      <div style={{ width: "100%" }} className="container"  style={{ marginTop: "74px",marginBottom:"90px" }}>
         <h2 style={{fontWeight:"bold"}}>อาหาร</h2>
         <Row gutter={[16, 16]}>
           {Array.from({ length: "6" }).map((i, idx) => (
