@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Row, Col, Button, Radio } from "antd";
 import { BsFillCupHotFill } from "react-icons/bs";
 import { FaBookOpen, FaTags, FaIceCream } from "react-icons/fa";
-import $ from 'jquery';
-
+import $ from "jquery";
+import HeaderComponent from "../../src/components/HeaderComponent";
 const itemStyled = {
   display: "flex",
   justifyContent: "center",
@@ -14,18 +14,18 @@ const itemStyled = {
 const Navbar = () => {
   const [activate, setActivate] = useState(0);
   const handleActivate = (e) => {
-    setActivate(e)
-    if(e == 0){
-      $('.glider').css('transform', 'translateX(0%)');
+    setActivate(e);
+    if (e == 0) {
+      $(".glider").css("transform", "translateX(0%)");
     }
-    if(e == 1){
-      $('.glider').css('transform', 'translateX(100%)');
+    if (e == 1) {
+      $(".glider").css("transform", "translateX(100%)");
     }
-    if(e == 2){
-      $('.glider').css('transform', 'translateX(200%)');
+    if (e == 2) {
+      $(".glider").css("transform", "translateX(200%)");
     }
-    if(e == 3){
-      $('.glider').css('transform', 'translateX(300%)');
+    if (e == 3) {
+      $(".glider").css("transform", "translateX(300%)");
     }
   };
   return (
@@ -41,9 +41,7 @@ const Navbar = () => {
         defaultValue="a"
         buttonStyle="outlined"
         className="radio-style"
-        style={{ width: "100%", borderRadius: "12px", background: "white",height:"70px",overflow:"hidden" }}
       >
-        {console.log(activate)}
         <Radio.Button
           id="radio-1"
           value="a"
@@ -231,32 +229,42 @@ const Navbar = () => {
 
 const UIMenu = () => {
   return (
-    <div style={{ width: "100%" }} className="container">
-      <Row gutter={[8, 8]} style={{ paddingTop: "15px" }}>
-        {Array.from({ length: "6" }).map((i, idx) => (
-          <Col
-            span={12}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              minHeight: "180px",
-            }}
-          >
-            <img
-              src="https://cdn.pixabay.com/photo/2021/03/15/17/56/food-6097593_960_720.png"
-              width={140}
-              height={120}
-            />
-            <h4 style={{ marginTop: "10px", color: "white", fontSize: "16px" }}>
-              ข้าวผัดกระเทียม-{idx + 1}
-            </h4>
-          </Col>
-        ))}
-      </Row>
-      <Navbar />
-    </div>
+    <>
+      <HeaderComponent />
+      <div style={{ width: "100%" }} className="container"  style={{ paddingTop: "74px" }}>
+        <h2 style={{fontWeight:"bold"}}>อาหาร</h2>
+        <Row gutter={[16, 16]}>
+          {Array.from({ length: "6" }).map((i, idx) => (
+            <Col
+              xs={12}
+              style={{
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div className="card-menu-style" style={{ width: "100%" }}>
+                <div style={{padding:"10px"}}>
+                  <img
+                    src="https://www.eatingwell.com/thmb/bGhAB_Vm1NUAtliDcrzixylY4SE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cucumber-vinegar-salad-bb9dbc2435374efb906353dfff2bfe7d.jpg"
+                    width="100%"
+                    className="img-menu"
+                  />
+                </div>
+                <div style={{ padding: "20px 10px" }}>
+                  <div>
+                    <h3>ข้าวผัดกระเทียม</h3>
+                  </div>
+                  <div>
+                    <h2 style={{fontWeight:"bold"}}>฿120</h2>
+                  </div>
+                </div>
+              </div>
+            </Col>
+          ))}
+        </Row>
+        <Navbar />
+      </div>
+    </>
   );
 };
 

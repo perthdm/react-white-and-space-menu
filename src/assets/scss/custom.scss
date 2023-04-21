@@ -1,9 +1,11 @@
 .container {
-  background-image: url('https://wallpapers.com/images/hd/dark-phone-wooden-pattern-z2vpc7qi6c47jf7l.jpg');
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  // background-image: url('https://wallpapers.com/images/hd/d  ark-phone-wooden-pattern-z2vpc7qi6c47jf7l.jpg');
+  min-height: calc(100vh - 64px);
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  background-color: #FBFCFB;
+  padding:16px;
 }
 .button-radio-style{
   height: 75px;
@@ -12,7 +14,18 @@
   padding-top: 0.5rem;
   width: 25%;
 }
+.radio-style{
+  width: 100%;
+  border-radius: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #f3f3f3;
+  height: 70px;
+  overflow: hidden;
+  box-shadow: 1px 1px 1px 1px #f5f5f5;;
+}
 .radio-style .ant-radio-button-wrapper{
+  background-color: transparent !important;
   span{
     text-align: center;
     text-align: -webkit-center;
@@ -45,4 +58,20 @@
 	z-index: 1;
 	border-radius: 99px;
 	transition: 0.25s ease-out;
+}
+.header-style{
+  box-shadow: 0px 2px 5px 0px #c5c5c5;
+  position: fixed;
+  background: white;
+  z-index: 10;
+  width: 100%;
+}
+.img-menu{
+  border-radius: 10px;  
+  object-fit: contain;
+}
+.card-menu-style{
+  border-radius: 10px;
+  min-height: 180px;
+  box-shadow: 1px 1px 1px 1px #f1f1f1;
 }
