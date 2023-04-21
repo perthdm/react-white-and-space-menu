@@ -35,6 +35,7 @@ const Navbar = () => {
         position: "absolute",
         bottom: 0,
         padding: "12px 10px",
+        left:"0px"
       }}
     >
       <Radio.Group
@@ -231,7 +232,7 @@ const UIMenu = () => {
   return (
     <>
       <HeaderComponent />
-      <div style={{ width: "100%" }} className="container"  style={{ paddingTop: "74px" }}>
+      <div style={{ width: "100%" }} className="container"  style={{ marginTop: "74px" }}>
         <h2 style={{fontWeight:"bold"}}>อาหาร</h2>
         <Row gutter={[16, 16]}>
           {Array.from({ length: "6" }).map((i, idx) => (
