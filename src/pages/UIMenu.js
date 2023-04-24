@@ -238,6 +238,7 @@ const UIMenu = () => {
           {Array.from({ length: "6" }).map((i, idx) => (
             <Col
               xs={12}
+              xl={4}
               style={{
                 justifyContent: "center",
                 alignItems: "center",

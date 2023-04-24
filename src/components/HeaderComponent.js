@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Layout, Row, Col, Button } from "antd";
 import { ShoppingOutlined } from "@ant-design/icons";
+import logo from "src/assets/image/logo.jpg";
 
 const { Header } = Layout;
 const HeaderComponent = () => {
@@ -9,7 +10,7 @@ const HeaderComponent = () => {
       <Header className="header-style" style={{ padding: 0, background: "white" }}>
         <Row>
           <Col flex="80px" style={{ textAlign: "center" }}>
-            logo
+            <img src={logo} className="logo-style"/>
           </Col>
           <Col flex="auto" style={{ textAlign: "center" }}>
             <h3>White and Space</h3>
